@@ -1,0 +1,329 @@
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        180deg,
+        rgb(1, 24, 94) 0%,
+        rgb(17, 65, 179) 40%,
+        rgba(54, 27, 224, 0.311) 100%
+    );
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* =====================================
+   MENÚ SUPERIOR
+===================================== */
+
+.menu {
+    height: 80px;
+    width: 100%;
+    background-color: #101827;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* =====================================
+   BOTÓN DE AYUDA - IZQUIERDA
+===================================== */
+
+.btn-help {
+    width: 42px;
+    height: 42px;
+
+    background-color: #6366f1;
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-help:hover {
+    background-color: #4f46e5;
+    transform: scale(1.1);
+}
+
+/* =====================================
+   LOGO SQL - DERECHA
+===================================== */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* =====================================
+   CONTENIDO PRINCIPAL
+===================================== */
+
+.content-section {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.text-container {
+    width: 100%;
+    max-width: 950px;
+
+    padding: 55px 40px;
+
+    background: rgba(12, 20, 45, 0.88);
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* =====================================
+   TÍTULOS
+===================================== */
+
+.main-title {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 25px;
+    color: #a5b4fc;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* =====================================
+   BOTONES PRINCIPALES
+===================================== */
+
+.botones-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.btn-iniciar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 65px;
+    padding: 15px 20px;
+
+    background-color: #6366f1;
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 9px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.btn-iniciar:hover {
+    background-color: #4f46e5;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(79,70,229,0.4);
+}
+
+.btn-iniciar:active {
+    transform: translateY(0);
+}
+
+/* =====================================
+   EFECTO DE ENFOQUE
+===================================== */
+
+.btn-iniciar:focus-visible,
+.btn-help:focus-visible {
+    outline: 2px solid #a5b4fc;
+    outline-offset: 4px;
+}
+
+/* =====================================
+   RESPONSIVE - TABLETS
+===================================== */
+
+@media (max-width: 768px) {
+
+    .menu {
+        padding: 0 30px;
+    }
+
+    .text-container {
+        padding: 40px 25px;
+    }
+
+    .main-title {
+        font-size: 34px;
+    }
+
+    .sub-title {
+        font-size: 22px;
+    }
+
+    .botones-container {
+        gap: 18px;
+    }
+}
+
+/* =====================================
+   RESPONSIVE - CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    .menu {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .btn-help {
+        width: 38px;
+        height: 38px;
+    }
+
+    .content-section {
+        padding: 25px 15px;
+    }
+
+    .text-container {
+        padding: 30px 20px;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+
+    .sub-title {
+        font-size: 19px;
+    }
+
+    .description {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .botones-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .btn-iniciar {
+        min-height: 55px;
+        font-size: 15px;
+    }
+}
+
+/* =====================================
+   BOTÓN REGRESAR
+===================================== */
+
+.btn-regresar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 30px;
+    padding: 12px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #4f46e5
+    );
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(79,70,229,0.3);
+
+    transition: all 0.3s ease;
+}
+
+.btn-regresar:hover {
+    background: #3730a3;
+
+    transform: translateX(-5px);
+
+    box-shadow: 0 6px 18px rgba(79,70,229,0.5);
+}
+
+.btn-regresar:active {
+    transform: scale(0.96);
+}
+
+.btn-regresar:focus-visible {
+    outline: 2px solid #a5b4fc;
+    outline-offset: 4px;
+}

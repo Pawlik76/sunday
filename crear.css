@@ -1,0 +1,164 @@
+@import url('colores.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background-white);
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* BARRAS SUPERIORES */
+
+.top-bar-main {
+    width: 100%;
+    height: 90px;
+    background-color: var(--primary-blue);
+}
+
+.top-bar-sub {
+    width: 100%;
+    height: 30px;
+    background-color: var(--secondary-blue);
+}
+
+.top-bar-third {
+    width: 100%;
+    height: 15px;
+    background-color: var(--tertiary-blue);
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenedor-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.panel-crear {
+    width: 100%;
+    max-width: 620px;
+    padding: 45px;
+    background-color: #292929;
+    border: 1px solid #45456b;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* TITULOS */
+
+.panel-crear h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.linea-decorativa {
+    width: 90px;
+    height: 4px;
+    margin: 0 auto 30px;
+    border-radius: 10px;
+    background: linear-gradient(
+        to right,
+        var(--tertiary-blue),
+        var(--secondary-blue)
+    );
+}
+
+/* FORMULARIO */
+
+#miFormulario {
+    display: flex;
+    flex-direction: column;
+}
+
+#miFormulario label {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+#dato {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 16px;
+    background-color: #202020;
+    border: 1px solid #555577;
+    border-radius: 10px;
+    outline: none;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#dato:focus {
+    border-color: var(--tertiary-blue);
+    box-shadow: 0 0 12px rgba(0, 102, 204, 0.2);
+}
+
+#dato::placeholder {
+    color: #888888;
+}
+
+/* BOTON ENVIAR */
+
+#miFormulario input[type="submit"] {
+    align-self: center;
+    min-width: 190px;
+    padding: 14px 35px;
+    margin-top: 15px;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid var(--tertiary-blue);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#miFormulario input[type="submit"]:hover {
+    background-color: rgba(0, 102, 204, 0.2);
+    box-shadow: 0 0 18px rgba(0, 102, 204, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ADAPTACION A MOVILES */
+
+@media (max-width: 600px) {
+    .contenedor-principal {
+        padding: 30px 16px;
+    }
+
+    .panel-crear {
+        padding: 28px 22px;
+    }
+
+    .panel-crear h2 {
+        font-size: 1.4rem;
+    }
+
+    #miFormulario input[type="submit"] {
+        width: 100%;
+    }
+}

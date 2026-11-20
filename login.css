@@ -1,0 +1,267 @@
+/* TEMA GENERAL Y FONDO DEGRADADO AZUL */
+body {
+margin: 0;
+background: linear-gradient(180deg, rgb(1, 24, 94) 0%, rgb(17, 65, 179) 40%, rgba(54, 27, 224, 0.311) 100%);
+background-attachment: fixed;
+color: white;
+font-family: Arial, sans-serif;
+}
+
+{
+box-sizing: border-box;
+}
+
+/* ENCABEZADO */
+.encabezado {
+min-height: 80px;
+background-color: #1e1e1e;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 15px 20px;
+border-bottom: 1px solid #333;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.encabezado h1 {
+margin: 0;
+font-size: 22px;
+}
+
+.encabezado p {
+margin: 5px 0 0;
+color: #94a3b8;
+font-size: 13px;
+}
+
+.iconos {
+display: none;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+width: 90%;
+max-width: 600px;
+margin: 55px auto;
+padding: 35px;
+background: rgba(18, 18, 18, 0.85);
+border: 1px solid rgba(255, 255, 255, 0.15);
+border-radius: 12px;
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* INTRODUCCION */
+.introduccion {
+text-align: center;
+max-width: 500px;
+margin: 0 auto 35px;
+}
+
+.introduccion h2 {
+font-size: 28px;
+margin-bottom: 15px;
+}
+
+.introduccion p {
+color: #cbd5e1;
+font-size: 16px;
+line-height: 1.6;
+}
+
+/* FORMULARIO LOGIN */
+.login {
+background: rgba(255, 255, 255, 0.03);
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+padding: 25px;
+}
+
+.login h2 {
+text-align: center;
+font-size: 25px;
+margin: 0 0 10px;
+}
+
+.subtitulo {
+text-align: center;
+color: #94a3b8;
+font-size: 14px;
+margin-bottom: 25px;
+}
+
+/* ELEMENTO DECORATIVO OCULTO */
+.calavera {
+display: none;
+}
+
+/* SEPARADORES */
+.separador {
+display: flex;
+align-items: center;
+gap: 15px;
+margin: 25px 0;
+color: #a5b4fc;
+font-weight: bold;
+font-size: 14px;
+}
+
+.separador::before,
+.separador::after {
+content: "";
+flex: 1;
+height: 1px;
+background: rgba(255, 255, 255, 0.2);
+}
+
+/* CAMPOS */
+.campo {
+display: flex;
+flex-direction: column;
+margin-bottom: 22px;
+text-align: left;
+}
+
+.campo label {
+margin-bottom: 9px;
+font-weight: bold;
+font-size: 14px;
+color: #e2e8f0;
+}
+
+.campo input {
+width: 100%;
+padding: 13px;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 7px;
+background: rgba(255, 255, 255, 0.08);
+color: white;
+font-size: 14px;
+outline: none;
+transition: border-color 0.2s, background 0.2s;
+}
+
+.campo input {
+border-color: #6366f1;
+background: rgba(255, 255, 255, 0.12);
+}
+
+.campo input::placeholder {
+color: #94a3b8;
+}
+
+/* OPCIONES */
+.opciones {
+display: flex;
+justify-content: flex-start;
+margin: 5px 0 20px;
+}
+
+.mostrar {
+display: flex;
+align-items: center;
+gap: 9px;
+color: #cbd5e1;
+font-size: 13px;
+cursor: pointer;
+}
+
+.mostrar input {
+accent-color: #6366f1;
+width: 16px;
+height: 16px;
+cursor: pointer;
+}
+
+/* MENSAJES */
+.mensaje {
+color: #fca5a5;
+font-size: 14px;
+text-align: center;
+}
+
+/* BOTON PRINCIPAL */
+button[type="submit"] {
+width: 100%;
+background-color: #6366f1;
+color: white;
+padding: 14px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: transform 0.2s, background-color 0.2s;
+}
+
+button[type="submit"] {
+background-color: #4f46e5;
+transform: translateY(-2px);
+}
+
+/* SEPARADOR INFERIOR */
+.separador-inferior {
+margin: 25px 0;
+}
+
+/* REGISTRO */
+.registro {
+text-align: center;
+color: #cbd5e1;
+font-size: 14px;
+margin-top: 20px;
+}
+
+.registro a,
+.volver {
+color: #a5b4fc;
+text-decoration: none;
+font-weight: bold;
+}
+
+.registro a,
+.volver {
+color: white;
+text-decoration: underline;
+}
+
+/* VOLVER */
+.volver {
+display: block;
+text-align: center;
+margin-top: 25px;
+}
+
+/* PIE DE PAGINA */
+footer {
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+padding: 25px;
+text-align: center;
+color: #94a3b8;
+font-size: 14px;
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ADAPTACION PARA CELULARES */
+@media (max-width: 600px) {
+.contenedor {
+width: 94%;
+padding: 22px 18px;
+margin: 30px auto;
+}
+
+.login {
+    padding: 18px;
+}
+
+.introduccion h2 {
+    font-size: 23px;
+}
+
+.encabezado h1 {
+    font-size: 19px;
+}
+
+}

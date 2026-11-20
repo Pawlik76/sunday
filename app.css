@@ -1,0 +1,21 @@
+*{box-sizing:border-box}body{margin:0;background:#343434;color:#fff;font-family:Montserrat,Arial,sans-serif}
+.b1{height:90px;background:#131452}.b2{height:30px;background:#2c1f7d}.b3{height:15px;background:#0066cc}
+.nav{display:flex;align-items:center;gap:14px;padding:10px 5%;background:#252525;border-bottom:1px solid #444}
+.nav form{margin:0}.sp{flex:1}.quien{color:#bbb;font-size:14px}a{color:#7db7ff}
+.wrap{width:92%;max-width:1100px;margin:30px auto}h1{margin:0 0 20px}h1 small{font-size:14px;color:#bbb;font-weight:400}
+.card{background:#252525;border:1px solid #444;border-radius:12px;padding:22px;margin-bottom:22px}
+.chico{max-width:460px;margin:40px auto}.card h2{margin-top:0;font-size:18px}
+label{display:block;margin:10px 0;font-size:14px}label small,.nota{color:#aaa;font-size:12px}
+input,textarea{width:100%;padding:10px;margin-top:5px;background:#3b3b3b;color:#fff;border:1px solid #555;border-radius:6px;font:inherit}
+input:focus,textarea:focus{outline:none;border-color:#0066cc}
+.btn{display:inline-block;padding:9px 16px;background:#131452;color:#fff;border:1px solid #0066cc;border-radius:6px;font-weight:700;cursor:pointer;text-decoration:none;font-size:14px}
+.btn:hover{background:#0066cc}.sec{background:#3b3b3b;border-color:#666}.peligro{border-color:#c0392b;background:#5a1d17}.peligro:hover{background:#c0392b}
+.fila{display:flex;gap:10px}.fila input{margin:0}.lista{list-style:none;padding:0;margin:0}
+.lista li{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #444}.lista form{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0 16px;margin-bottom:12px}
+.err{background:#5a1d17;border:1px solid #c0392b;padding:12px;border-radius:6px}.ok{background:#164a2a;border:1px solid #2ecc71;padding:12px;border-radius:6px}
+.tabla{overflow-x:auto;background:#252525;border:1px solid #444;border-radius:10px;padding:10px}
+table{width:100%;border-collapse:collapse}th{background:#131452;padding:10px;text-align:left;white-space:nowrap;border-bottom:3px solid #0066cc}
+td{padding:9px 10px;border-bottom:1px solid #444}tbody tr:nth-child(even){background:#303030}
+.acc{white-space:nowrap}.acc form{display:inline}.mig{color:#aaa;font-size:14px}.pag{display:flex;gap:10px;margin:18px 0}
+code{background:#3b3b3b;padding:1px 5px;border-radius:4px}

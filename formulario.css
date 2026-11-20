@@ -1,0 +1,307 @@
+
+/* =====================================
+   TEMA GENERAL Y FONDO DEGRADADO AZUL
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(
+        180deg,
+        rgb(1, 24, 94) 0%,
+        rgb(17, 65, 179) 40%,
+        rgba(54, 27, 224, 0.311) 100%
+    );
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* =====================================
+   ENCABEZADO
+===================================== */
+
+.encabezado {
+    height: 80px;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.iconos {
+    display: none;
+}
+
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.contenedor {
+    width: 90%;
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 35px;
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* =====================================
+   INTRODUCCIÓN
+===================================== */
+
+.introduccion {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.introduccion h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.introduccion p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* =====================================
+   SEPARADORES
+===================================== */
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0 25px;
+    color: #a5b4fc;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* =====================================
+   CAMPOS DEL FORMULARIO
+===================================== */
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    /* SEPARACIÓN ENTRE LOS INPUTS */
+    column-gap: 25px;
+    row-gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-width: 0;
+}
+
+.campo label {
+    margin-bottom: 9px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #e2e8f0;
+}
+
+.campo input {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #6366f1;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.campo input:focus {
+    border-color: #a5b4fc;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.campo input::placeholder {
+    color: #94a3b8;
+}
+
+.campo input[type="date"] {
+    color-scheme: dark;
+}
+
+.campo small {
+    margin-top: 7px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* =====================================
+   PRIVACIDAD
+===================================== */
+
+.privacidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0 20px;
+    text-align: left;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.privacidad input {
+    accent-color: #6366f1;
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* =====================================
+   MENSAJES
+===================================== */
+
+.mensaje {
+    color: #fca5a5;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =====================================
+   BOTÓN PRINCIPAL
+===================================== */
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #6366f1;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   ACCESO AL LOGIN
+===================================== */
+
+.acceso {
+    text-align: center;
+    margin-top: 25px;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.acceso a,
+.volver {
+    color: #a5b4fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.acceso a:hover,
+.volver:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* =====================================
+   VOLVER
+===================================== */
+
+.volver {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* =====================================
+   ADAPTACIÓN PARA TABLETS Y CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    .encabezado {
+        height: 65px;
+        padding: 0 15px;
+    }
+
+    .contenedor {
+        width: 94%;
+        padding: 22px 18px;
+        margin: 25px auto;
+    }
+
+    .campos {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .introduccion h2 {
+        font-size: 24px;
+    }
+
+    .introduccion p {
+        font-size: 14px;
+    }
+
+    .separador {
+        font-size: 15px;
+    }
+
+    .campo input {
+        padding: 13px;
+    }
+
+    .privacidad {
+        font-size: 12px;
+    }
+
+    button[type="submit"] {
+        font-size: 15px;
+    }
+}

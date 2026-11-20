@@ -1,0 +1,187 @@
+```css
+@import url('colores.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-white);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* BARRAS SUPERIORES */
+
+.top-bar-main {
+    width: 100%;
+    height: 90px;
+    background-color: var(--primary-blue);
+}
+
+.top-bar-sub {
+    width: 100%;
+    height: 30px;
+    background-color: var(--secondary-blue);
+}
+
+.top-bar-third {
+    width: 100%;
+    height: 15px;
+    background-color: var(--tertiary-blue);
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+
+form {
+    width: calc(100% - 40px);
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background-color: #292929;
+    border: 1px solid #45456b;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* TITULO */
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 35px;
+}
+
+/* ETIQUETAS */
+
+form label {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* CAMPOS DE TEXTO */
+
+form input[type="text"] {
+    width: 100%;
+    min-height: 50px;
+    padding: 14px 16px;
+
+    background-color: #202020;
+    color: #ffffff;
+
+    border: 1px solid #555577;
+    border-radius: 10px;
+    outline: none;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus {
+    border-color: var(--tertiary-blue);
+    box-shadow: 0 0 12px rgba(0, 102, 204, 0.2);
+}
+
+form input[type="text"]::placeholder {
+    color: #888888;
+}
+
+/* CAMPO PARA NOMBRE DE TABLA */
+
+#tabla_nombre {
+    width: 100%;
+}
+
+#tabla_nombre label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+#tabla_nombre input[type="text"] {
+    margin-bottom: 5px;
+}
+
+/* BOTON ENVIAR */
+
+form input[type="submit"] {
+    align-self: center;
+    min-width: 190px;
+    padding: 14px 30px;
+    margin-top: 10px;
+
+    background-color: transparent;
+    color: #ffffff;
+
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        var(--tertiary-blue),
+        var(--primary-blue)
+    ) 1;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgba(0, 102, 204, 0.15);
+    box-shadow: 0 0 18px rgba(0, 102, 204, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ADAPTACION PARA MOVILES */
+
+@media (max-width: 600px) {
+    form {
+        margin: 45px auto;
+        padding: 28px 22px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-top: 25px;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+    }
+}
+.top-bar-main {
+    width: 100%;
+    height: 90px;
+    background-color: var(--primary-blue);
+}
+
+.top-bar-sub {
+    width: 100%;
+    height: 30px;
+    background-color: var(--secondary-blue);
+}
+
+.top-bar-third {
+    width: 100%;
+    height: 15px;
+    background-color: var(--tertiary-blue);
+}

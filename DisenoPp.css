@@ -1,0 +1,238 @@
+/* TEMA GENERAL Y FONDO DEGRADADO AZUL */
+body {
+    margin: 0;
+    background: linear-gradient(180deg, rgb(1, 24, 94) 0%, rgb(17, 65, 179) 40%, rgba(54, 27, 224, 0.311) 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* MENÚ SUPERIOR */
+.menu {
+    height: 80px;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px; /* Margen cómodo a los lados */
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.marca h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.opciones {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.opciones a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.opciones a:hover {
+    color: white;
+}
+
+.btn-menu {
+    background-color: #6366f1;
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* CONTENIDO Y HERO */
+.contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero {
+    max-width: 800px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* BOTONES PRINCIPALES */
+.hero-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-primario {
+    background-color: #6366f1;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primario:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* SECCIONES Y TARJETAS (CARDS) */
+.seccion {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 80px;
+}
+
+.seccion h2 {
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+.grid-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: rgba(18, 18, 18, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: left;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    border-color: #6366f1;
+}
+
+.tarjeta .icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.tarjeta h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.tarjeta p {
+    margin: 0;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* DEMO SIMULADA DE TABLA */
+.demo-box {
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+}
+
+.demo-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.badge-status { color: #10b981; }
+
+.tabla-demo {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-demo th, .tabla-demo td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.badge.activo { background: #065f46; color: #34d399; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+.badge.pendiente { background: #854d0e; color: #fde047; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+
+.btn-mini {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.pie-pagina {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
